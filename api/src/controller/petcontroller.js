@@ -4,14 +4,15 @@ const server = Router();
 
 server.post('/pet', async (req, resp) => {
     try {
-        const {nome} = req.body;
-        const resposta = await (inserirPet(nome));
+        const {id, nome} = req.body;
+        const resposta = await (inserirPet(id, nome));
         resp.send(resposta);
     } catch (err) {
-        console.log(err);
+        resp.status(400).send({
+            erro: err.message
+        })
     }
 }) 
-
 
 
 export default server;

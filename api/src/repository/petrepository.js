@@ -3,10 +3,9 @@ import { con } from './connection.js'
 export async function inserirPet(pet){
     const comando = `
              INSERT INTO tb_pet(id_pet, nm_pet)
-                        values(?, ?)`
-
-    const [resposta] = await con.query(comando, [pet.nm])
-    pet.id = resposta.insertId;
+                        values(?, ?) `;
+    const [resposta] = await con.query(comando, [pet.]);
+    pet.id_pet = resposta.insertId;
     return pet;
 }
 
