@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import petcontroller from './src/controller/petcontroller.js'
+import petcontroller from './controller/petController.js'
 
 import express from 'express'
 import cors from 'cors'
