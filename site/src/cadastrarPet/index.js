@@ -20,7 +20,7 @@ export default function Index(){
         try {
             const re = await consultarPet(nome.id, nome.nome);
             console.log(re)
-            alert(re(nome, id));
+            alert('pets no terminal');
         } catch (err) {
             alert.err('Errooooo')
         }
